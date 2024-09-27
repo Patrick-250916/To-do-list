@@ -1,0 +1,171 @@
+/* el link de bootstrap*/
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    /* outline: 3px solid red; */
+}
+
+body{
+    /* min-width: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+    background: url(imagenes/fondoAzul.jpeg) no-repeat center center/cover;
+}
+
+/* Contenerdor body > main class="contenedor"> */
+.contenedor{
+    width: 90%; /*700px por Defecto*/
+    min-height: 100vh; /* 500px por Defecto*/
+    background-color: transparent,;
+    padding: 40px;
+    border: 5px solid pink;
+    border-radius: 20px;
+}
+
+/* Titulo */
+h2{
+    color: #fff;
+    font-size: 50px;
+    /* font-weight: bold; */
+}
+
+/* Input */
+input{
+  width: 60vw;
+  /* height: 50px; */
+  font-size: 20px;
+  margin: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+input:focus{
+    outline: none;
+    border: none;
+}
+
+/* Boton */
+button{
+    background: transparent; /* Black*/
+    cursor: pointer;
+    border: none;
+    padding: 16px 32px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    position: relative;
+    border-radius: 12px;
+}
+button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+    45deg,#f00,#00f,deeppink,#00f,
+    #f00,#00f,deeppink,#00f
+    );
+    background-size: 800%;
+    border-radius: 10px;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+@keyframes glowing{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+/* Lista de Tarea */
+#listaDeTareas{
+    width: 90%;
+    /* margin-top: 20px; */
+}
+
+
+/* lista Creada div class='tarea'*/
+.tarea{
+    width: 100%;
+    display: flex; 
+    justify-content: space-around;
+    text-align: center;
+    color:#fff;
+    background: #48e;
+    margin-top: 7px;
+    /* margin-left: 10px; */
+    padding: 5px;
+    font-family: arial;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.tarea:hover{
+    color: transparent;
+    background: linear-gradient(red,yellow);
+    background-clip: text;
+    font-family: firaCode Nerd Font Mono;
+    font-size: bold;
+}
+
+/* Dar click al icono chulito*/
+.tarea.completada{
+    text-decoration: line-through; /* Tachar texto*/
+    background: linear-gradient(#48e, pink);
+    color: red;
+}
+
+
+/* Iconos */
+i{
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+.icono-completar{
+    color: rgb(0, 255, 0);
+}
+.icono-eliminar{
+    color: #fff;
+}
+.icono-completar:hover,
+.icono-eliminar:hover{
+    background-color: rgba(red, green, blue, 0.523);
+}
+
+
+/* Media Queries */
+
+/*
+@media screen and (max-width: 500px) {
+    body{
+        outline: 15px solid steelblue;
+        
+        height: max-content;
+        justify-content: center;
+        
+    }
+    .contenedor{
+
+    }
+    input{
+        width: 90%;
+        padding: 2px;
+        border: none;
+    }
+
+}*/
+
