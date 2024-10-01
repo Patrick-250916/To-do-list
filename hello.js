@@ -44,6 +44,8 @@ function agregarTarea(){
         // Agreagar tarea a la lista
         listaDeTareas.appendChild(tareaNueva);
 
+        // inpunt este limpio para otra tarea
+        input.value = '';
     }else{
         alert('ingresa una tarea');
         console.log('Hola debes tener una tarea');
