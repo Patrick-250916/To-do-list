@@ -92,7 +92,7 @@ button::before{
 }
 /* Lista de Tarea */
 #listaDeTareas{
-    width: 90%;
+    width: 100%;/*El ancho elemento creado*/
     /* margin-top: 20px; */
 }
 
